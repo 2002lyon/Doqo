@@ -16,8 +16,6 @@ const Navbar = () => {
     event.stopPropagation();
   };
 
-  console.log(openMenu);
-
   return (
     <div className="nav-container shadow-sm">
       <Container>
