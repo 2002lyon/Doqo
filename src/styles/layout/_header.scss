@@ -35,7 +35,6 @@
 
     .mobile-menu {
       display: none;
-      // border: 1px solid red;
       width: 40px;
 
       @include respond(xsmall) {
@@ -47,6 +46,96 @@
         height: 100%;
         object-fit: contain;
         object-position: center;
+      }
+    }
+  }
+}
+
+.mobile-navigations {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: rgba($black, 0);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: background-color 0.8s ease-in-out, opacity 0.8s ease-in-out;
+
+  &.open {
+    background-color: rgba($black, 0.3);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .menu-container {
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: white;
+    width: 80%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform: translateX(100%);
+    transition: transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) 0.2s;
+
+    &.open {
+      transform: translateX(0);
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      width: 20px;
+      height: 20px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+      }
+    }
+
+    .logo-container {
+      width: 100%;
+      height: 100px;
+      display: flex;
+      padding: 0 5rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: centerF;
+      }
+    }
+    .links-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+
+      li {
+        list-style: none;
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
+      }
+
+      button {
+        margin-top: 3rem;
       }
     }
   }
