@@ -1,0 +1,53 @@
+.nav-container {
+  background-color: $white;
+  padding: 0.5rem 0;
+  z-index: 100;
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    flex-wrap: wrap;
+
+    @include respond(small) {
+      gap: 2rem;
+    }
+
+    .navigations {
+      .links-container {
+        display: flex;
+        align-items: center;
+        gap: 3.5rem;
+        color: $black;
+
+        @include respond(xsmall) {
+          display: none;
+        }
+
+        button {
+          a {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    .mobile-menu {
+      display: none;
+      // border: 1px solid red;
+      width: 40px;
+
+      @include respond(xsmall) {
+        display: block;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+      }
+    }
+  }
+}

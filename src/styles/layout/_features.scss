@@ -1,0 +1,115 @@
+.feature-container {
+  display: flex;
+  flex-direction: column;
+
+  @include respond(small) {
+    margin-top: 8rem;
+  }
+  @include respond(xsmall) {
+    margin-top: 6rem;
+  }
+
+  .feature-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $black;
+    display: flex;
+
+    @include respond(small) {
+      font-size: 2.2rem;
+    }
+    @include respond(xsmall) {
+      font-size: 2rem;
+    }
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+
+    @include respond(large) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    @include respond(small) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    @include respond(xsmall) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .feature-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgba($grey, 0.2);
+      padding: 1rem;
+      border-radius: 10px;
+
+      .feature-image-container {
+        width: 55%;
+        height: 200px;
+        aspect-ratio: 1/1;
+
+        @include respond(small) {
+          width: 40%;
+          height: 150px;
+          aspect-ratio: 1/1;
+        }
+        @include respond(xsmall) {
+          width: 30%;
+          height: 120px;
+          aspect-ratio: 1/1;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          object-position: center;
+        }
+      }
+
+      .feature-information-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3 {
+          font-size: 1.2rem;
+          font-weight: 600;
+          margin: 1rem 0;
+          text-align: center;
+
+          @include respond(small) {
+            font-size: 1.1rem;
+            margin: 1rem 0 0.5rem 0;
+          }
+          @include respond(xsmall) {
+            font-size: 1.1rem;
+            margin: 1rem 0 0.3rem 0;
+          }
+        }
+        p {
+          font-size: 1rem;
+          text-align: center;
+
+          @include respond(small) {
+            font-size: 0.9rem;
+          }
+          @include respond(xsmall) {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+}
