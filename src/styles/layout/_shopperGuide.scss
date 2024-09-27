@@ -17,6 +17,7 @@
 
   @include respond(xsmall) {
     padding-top: 4rem;
+    flex-direction: column;
   }
 
   .guide-image-container {
@@ -29,7 +30,7 @@
       padding: 1rem;
     }
     @include respond(xsmall) {
-      display: none;
+      // display: none;
     }
 
     img {

@@ -17,6 +17,13 @@
     margin-top: 0rem;
   }
 
+  @include respond(xsmall) {
+    padding-bottom: 2rem;
+    gap: 1rem;
+    margin-top: 0rem;
+    flex-direction: column;
+  }
+
   .guide-image-container {
     width: 50%;
     height: 50%;
@@ -27,7 +34,7 @@
       padding: 1rem;
     }
     @include respond(xsmall) {
-      display: none;
+      // display: none;
     }
 
     img {
