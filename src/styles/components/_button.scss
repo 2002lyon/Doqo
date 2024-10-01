@@ -1,9 +1,11 @@
 .primary-cta-btn {
   background-color: $color-primary;
   color: $white;
-  padding: 0.8rem 2rem;
+  // padding: 0.8rem 2rem;
+  padding: 0.5rem 2rem;
   border-radius: 6px;
   transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  font-size: 0.9rem;
 
   &:hover {
     background-color: rgba($color-primary, 0.94);
